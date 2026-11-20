@@ -1,0 +1,19 @@
+@host = https://localhost:7100
+
+GET {{host}}/api/tasks
+###
+GET {{host}}/api/tasks/1
+###
+POST {{host}}/api/tasks
+Content-Type: application/json
+
+{ "title": "Nueva", "description": "Prueba", "isCompleted": false }
+###
+PUT {{host}}/api/tasks/1
+Content-Type: application/json
+
+{ "title": "Editada", "description": "Cambio", "isCompleted": true }
+###
+DELETE {{host}}/api/tasks/1
+###
+GET {{host}}/api/tipocambio
